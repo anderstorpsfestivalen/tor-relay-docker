@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.16
+FROM ghcr.io/linuxserver/baseimage-alpine:3.18
 
 LABEL maintainer "DENNIS <dennis@gmail.com>"
 
@@ -7,9 +7,7 @@ ENV XDG_DATA_HOME="/config" \
     XDG_CONFIG_HOME="/config"
 ENV TZ America/Los_Angeles
 
-RUN sed -i -e 's/v[[:digit:]]\..*\//edge\//g' /etc/apk/repositories
-RUN apk update
-RUN apk --no-cache add bash tzdata tor
+RUN apk --no-cache add bash tzdata tor=0.4.8.10-r0
 
 EXPOSE 9001 9030
 
