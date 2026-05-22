@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:latest
+FROM ghcr.io/linuxserver/baseimage-alpine:edge
 
 LABEL maintainer "DENNIS <dennis@gmail.com>"
 
