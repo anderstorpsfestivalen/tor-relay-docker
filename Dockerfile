@@ -29,4 +29,6 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod ugo+rx /entrypoint.sh
 
 COPY /root /
+RUN chmod ugo+rx /etc/cont-init.d/30-config /etc/services.d/tor/run
+
 VOLUME /data
